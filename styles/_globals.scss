@@ -1,0 +1,105 @@
+@import "vars";
+@import "mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $bodyFont;
+  font-size: 14px;
+  color: $text;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 60%;
+  margin: auto;
+}
+
+@media screen and (max-width: 1584px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1191px) {
+  .container {
+    width: 90%;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $headingsFont;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  font-size: 45px;
+  font-weight: 400;
+  line-height: 68px;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 51px;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 41px;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 38px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+.free-text {
+  color: $primary;
+}
+
+// back to top button
+
+#myBtn {
+  border: none;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  cursor: pointer;
+  transition: $transition;
+  &:hover {
+    transform: scale(1.1);
+  }
+}

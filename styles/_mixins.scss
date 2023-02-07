@@ -1,0 +1,17 @@
+@import "vars";
+
+@mixin btn($padding, $bg) {
+  padding: $padding;
+  background-color: $bg;
+  color: $white;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  border: none;
+  transition: $transition;
+  cursor: pointer;
+  &:hover {
+    background-color: $secondary;
+    transform: scale(1.1);
+  }
+}
