@@ -42,6 +42,11 @@ body {
   margin: auto;
 }
 
+.text-container {
+  width: 80%;
+  margin: auto;
+}
+
 @media screen and (max-width: 1584px) {
   .container {
     width: 80%;
@@ -59,9 +64,22 @@ body {
     padding: 0 50px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 453px) {
   .container {
-    width: 80%;
+    width: 90%;
+  }
+  .nav-container {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .container {
+    width: 95%;
+  }
+  .text-container {
+    width: 90%;
+    margin: auto;
   }
 }
 h1,
@@ -92,21 +110,41 @@ h1 {
     font-size: 36px;
   }
 }
+@media screen and (max-width: 425px) {
+  h1 {
+    font-size: 30px;
+  }
+}
 h2 {
   font-size: 32px;
   line-height: 51px;
 }
 
+@media screen and (max-width: 425px) {
+  h2 {
+    font-size: 24px;
+  }
+}
 h3 {
   font-size: 24px;
   line-height: 41px;
 }
 
+@media screen and (max-width: 425px) {
+  h3 {
+    font-size: 18px;
+  }
+}
 h4 {
   font-size: 24px;
   line-height: 38px;
 }
 
+@media screen and (max-width: 425px) {
+  h3 {
+    font-size: 20px;
+  }
+}
 p {
   font-size: 16px;
   line-height: 26px;
@@ -127,11 +165,26 @@ p {
   right: 30px;
   cursor: pointer;
   transition: 0.3s linear;
+  z-index: 50;
 }
 #myBtn:hover {
   transform: scale(1.1);
 }
+#myBtn img {
+  width: 30px;
+}
 
+@media screen and (max-width: 320px) {
+  #myBtn {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    z-index: 50;
+  }
+  #myBtn:hover {
+    transform: scale(1.1);
+  }
+}
 .show-nav {
   transform: translateY(0);
 }
@@ -146,6 +199,7 @@ header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
 }
 header nav a img {
   padding: 20px 0;
@@ -199,11 +253,10 @@ header nav .burger span {
     height: 400px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: end;
     justify-content: start;
     padding-top: 90px;
-    border-left: 1px solid #dd71c6;
-    border-bottom: 1px solid #dd71c6;
+    border-bottom: 2px solid #dd71c6;
     transition: 0.3s linear;
     transform: translateY(-100%);
   }
@@ -233,7 +286,7 @@ header .hero .left-header .medium-spots {
   display: none;
 }
 header .hero .left-header button {
-  padding: 10px 20px;
+  padding: 10px 15px;
   background-color: #dd71c6;
   color: #fff;
   font-size: 16px;
@@ -297,6 +350,7 @@ header .hero .medium-btn {
   flex-direction: column;
   align-items: center;
   padding: 100px 0;
+  margin-top: -10px;
 }
 .banner article {
   display: grid;
@@ -374,7 +428,7 @@ header .hero .medium-btn {
   color: #fff;
 }
 .consultation article .consult-info button {
-  padding: 10px 20px;
+  padding: 10px 15px;
   background-color: #dd71c6;
   color: #fff;
   font-size: 16px;
@@ -408,7 +462,7 @@ header .hero .medium-btn {
   display: none;
 }
 .how-we-can-help article button {
-  padding: 10px 20px;
+  padding: 10px 15px;
   background-color: #dd71c6;
   color: #fff;
   font-size: 16px;
@@ -490,7 +544,7 @@ header .hero .medium-btn {
   font-size: 16px;
 }
 .information article button {
-  padding: 10px 20px;
+  padding: 10px 15px;
   background-color: #dd71c6;
   color: #fff;
   font-size: 16px;
@@ -541,7 +595,7 @@ header .hero .medium-btn {
   transform: scale(1.2);
 }
 .faq button {
-  padding: 10px 20px;
+  padding: 10px 15px;
   background-color: #dd71c6;
   color: #fff;
   font-size: 16px;
@@ -680,10 +734,10 @@ footer .bottom-bar .bb-info p {
   header .hero .right-header p {
     font-size: 16px;
   }
-  header .hero .right-header .offer:nth-child(1) {
-    font-size: 12px;
+  header .hero .right-header .offer .offer-info p:nth-child(1) {
+    font-size: 18px;
   }
-  header .hero .right-header .offer:nth-child(2) {
+  header .hero .right-header .offer .offer-info p:nth-child(2) {
     font-size: 50px;
   }
   header .hero .medium-info {
@@ -696,7 +750,7 @@ footer .bottom-bar .bb-info p {
     align-self: center;
   }
   header .hero button {
-    padding: 10px 20px;
+    padding: 10px 15px;
     background-color: #dd71c6;
     color: #fff;
     font-size: 16px;
@@ -713,8 +767,11 @@ footer .bottom-bar .bb-info p {
   }
 }
 @media screen and (max-width: 1087px) {
+  .banner article .banner-info {
+    padding: 15px 10px;
+  }
   .banner article .banner-info p:nth-child(2) {
-    font-size: 24px;
+    font-size: 22px;
     line-height: 15px;
   }
   .banner article .banner-info p:nth-child(3) {
@@ -730,14 +787,13 @@ footer .bottom-bar .bb-info p {
   .consultation article .consult-info {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 404px;
-  }
-  .consultation article .consult-info div h2 {
-    width: 404px;
   }
   .consultation article .consult-info button {
     margin: 80px;
+    align-self: center;
+  }
+  .consultation article .consult-avatar img {
+    width: 100%;
   }
 }
 @media screen and (max-width: 1087px) {
@@ -748,11 +804,9 @@ footer .bottom-bar .bb-info p {
   }
   .how-we-can-help article h2 {
     text-align: left;
-    width: 404px;
     margin-bottom: 50px;
   }
   .how-we-can-help article p {
-    width: 404px;
     text-align: left;
   }
   .how-we-can-help article .help-medium-img {
@@ -767,12 +821,10 @@ footer .bottom-bar .bb-info p {
 @media screen and (max-width: 1087px) {
   .information article h2 {
     text-align: left;
-    width: 404px;
   }
   .information article .info {
     display: flex;
     flex-direction: column;
-    width: 404px;
   }
   .information article .info .left-info {
     padding: 45px 80px;
@@ -783,9 +835,6 @@ footer .bottom-bar .bb-info p {
   }
 }
 @media screen and (max-width: 1087px) {
-  .faq article {
-    width: 404px;
-  }
   .faq article div {
     padding: 10px 15px;
   }
@@ -803,16 +852,120 @@ footer .bottom-bar .bb-info p {
     justify-content: start;
     align-items: start;
   }
-  footer .footer .left-footer {
-    width: 404px;
-  }
   footer .footer .right-footer {
     gap: 80px;
   }
 }
-@media screen and (max-width: 600px) {
-  .banner-info {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+@media screen and (max-width: 630px) {
+  header {
+    background-position: 76%;
+  }
+  header nav {
+    background-color: transparent;
+  }
+  header .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header .hero .left-header {
+    text-align: center;
+  }
+  header .hero .right-header .offer {
+    padding: 20px 10px;
+    gap: 20px;
+  }
+  header .hero .right-header .offer .offer-info p:nth-child(1) {
+    font-size: 12px;
+  }
+  header .hero .right-header .offer .offer-info p:nth-child(2) {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 630px) {
+  .banner article {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .banner article .banner-info {
+    padding: 20px 10px;
+  }
+  .banner article .banner-info p:nth-child(2) {
+    font-size: 22px;
+    line-height: 15px;
+  }
+  .banner article .banner-info p:nth-child(3) {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 639px) {
+  footer .bottom-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 425px) {
+  header {
+    background-position: 74%;
+  }
+  header .hero .right-header .offer {
+    padding: 10px 5px;
+    gap: 8px;
+    height: 100px;
+  }
+  header .hero .right-header .offer .offer-info p:nth-child(1) {
+    font-size: 10px;
+  }
+  header .hero .right-header .offer .offer-info p:nth-child(2) {
+    font-size: 30px;
+    margin-top: 5px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .information article h2 {
+    text-align: left;
+  }
+  .information article .info {
+    display: flex;
+    flex-direction: column;
+  }
+  .information article .info .left-info {
+    padding: 20px 40px;
+    margin-bottom: 44px;
+  }
+  .information article .info .right-info {
+    padding: 20px 40px;
+  }
+}
+@media screen and (max-width: 425px) {
+  footer .footer .right-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  footer .bottom-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 320px) {
+  header {
+    background-position: 73%;
+  }
+  header .hero .right-header {
+    border-radius: 20px;
+    padding: 15px 10px;
+  }
+  header .hero .right-header .offer {
+    gap: 8px;
+    height: 100px;
+  }
+  header .hero .right-header .offer .offer-info p:nth-child(1) {
+    font-size: 8px;
+  }
+  header .hero .right-header .offer .offer-info p:nth-child(2) {
+    font-size: 25px;
+    margin-top: 5px;
   }
 }/*# sourceMappingURL=style.css.map */

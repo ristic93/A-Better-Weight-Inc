@@ -15,6 +15,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
     a {
       img {
         padding: 20px 0;
@@ -73,11 +74,10 @@ header {
         height: 400px;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: end;
         justify-content: start;
         padding-top: 90px;
-        border-left: 1px solid $primary;
-        border-bottom: 1px solid $primary;
+        border-bottom: 2px solid $primary;
         transition: $transition;
         transform: translateY(-100%);
         li {
@@ -109,7 +109,7 @@ header {
         display: none;
       }
       button {
-        @include btn(10px 20px, $primary);
+        @include btn(10px 15px, $primary);
       }
     }
     .right-header {
@@ -166,6 +166,7 @@ header {
   flex-direction: column;
   align-items: center;
   padding: 100px 0;
+  margin-top: -10px;
   article {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -233,7 +234,7 @@ header {
         }
       }
       button {
-        @include btn(10px 20px, $primary);
+        @include btn(10px 15px, $primary);
         margin-top: 37px;
       }
     }
@@ -259,7 +260,7 @@ header {
       display: none;
     }
     button {
-      @include btn(10px 20px, $primary);
+      @include btn(10px 15px, $primary);
       margin-top: 34px;
       margin-bottom: 46px;
     }
@@ -330,7 +331,7 @@ header {
       }
     }
     button {
-      @include btn(10px 20px, $primary);
+      @include btn(10px 15px, $primary);
       margin-top: 88px;
     }
   }
@@ -373,7 +374,7 @@ header {
     }
   }
   button {
-    @include btn(10px 20px, $primary);
+    @include btn(10px 15px, $primary);
     margin-top: 83px;
   }
 }
@@ -483,7 +484,7 @@ footer {
 
 //*** responsive ***//
 
-//*** media queries header (medium devices) ***//
+//*** media queries header (tablet devices) ***//
 
 @media screen and (max-width: 1087px) {
   header {
@@ -522,11 +523,13 @@ footer {
           font-size: 16px;
         }
         .offer {
-          &:nth-child(1) {
-            font-size: 12px;
-          }
-          &:nth-child(2) {
-            font-size: 50px;
+          .offer-info p {
+            &:nth-child(1) {
+              font-size: 18px;
+            }
+            &:nth-child(2) {
+              font-size: 50px;
+            }
           }
         }
       }
@@ -540,21 +543,22 @@ footer {
         align-self: center;
       }
       button {
-        @include btn(10px 20px, $primary);
+        @include btn(10px 15px, $primary);
       }
     }
   }
 }
 
-//*** media queries banner (medium devices) ***//
+//*** media queries banner (tablet devices) ***//
 
 @media screen and (max-width: 1087px) {
   .banner {
     article {
       .banner-info {
+        padding: 15px 10px;
         p {
           &:nth-child(2) {
-            font-size: 24px;
+            font-size: 22px;
             line-height: 15px;
           }
           &:nth-child(3) {
@@ -566,7 +570,7 @@ footer {
   }
 }
 
-//*** media queries consultation (medium devices) ***//
+//*** media queries consultation (tablet devices) ***//
 
 @media screen and (max-width: 1087px) {
   .consultation {
@@ -577,22 +581,21 @@ footer {
       .consult-info {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        width: $medWidth;
-        div {
-          h2 {
-            width: $medWidth;
-          }
-        }
         button {
           margin: 80px;
+          align-self: center;
+        }
+      }
+      .consult-avatar {
+        img {
+          width: 100%;
         }
       }
     }
   }
 }
 
-//*** media queries how-can-we-help (medium devices) ***//
+//*** media queries how-can-we-help (tablet devices) ***//
 
 @media screen and (max-width: 1087px) {
   .how-we-can-help {
@@ -602,11 +605,9 @@ footer {
       align-items: center;
       h2 {
         text-align: left;
-        width: $medWidth;
         margin-bottom: 50px;
       }
       p {
-        width: $medWidth;
         text-align: left;
       }
       .help-medium-img {
@@ -621,19 +622,17 @@ footer {
   }
 }
 
-//*** media queries information (medium devices) ***//
+//*** media queries information (tablet devices) ***//
 
 @media screen and (max-width: 1087px) {
   .information {
     article {
       h2 {
         text-align: left;
-        width: $medWidth;
       }
       .info {
         display: flex;
         flex-direction: column;
-        width: $medWidth;
         .left-info {
           padding: 45px 80px;
           margin-bottom: 44px;
@@ -646,12 +645,11 @@ footer {
   }
 }
 
-//*** media queries faq (medium devices) ***//
+//*** media queries faq (tablet devices) ***//
 
 @media screen and (max-width: 1087px) {
   .faq {
     article {
-      width: $medWidth;
       div {
         padding: 10px 15px;
         img {
@@ -662,7 +660,7 @@ footer {
   }
 }
 
-//*** media queries footer (medium devices) ***//
+//*** media queries footer (tablet devices) ***//
 
 @media screen and (max-width: 1087px) {
   footer {
@@ -672,9 +670,6 @@ footer {
       flex-direction: column;
       justify-content: start;
       align-items: start;
-      .left-footer {
-        width: $medWidth;
-      }
       .right-footer {
         gap: 80px;
       }
@@ -682,11 +677,164 @@ footer {
   }
 }
 
-//*** media queries banner (small devices) ***//
+//*** media queries header (m devices) ***//
 
-@media screen and (max-width: 600px) {
-  .banner-info {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+@media screen and (max-width: 630px) {
+  header {
+    background-position: calc(76%);
+    nav {
+      background-color: transparent;
+    }
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .left-header {
+        text-align: center;
+      }
+      .right-header {
+        .offer {
+          padding: 20px 10px;
+          gap: 20px;
+          .offer-info p {
+            &:nth-child(1) {
+              font-size: 12px;
+            }
+            &:nth-child(2) {
+              font-size: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//*** media queries banner (m devices) ***//
+
+@media screen and (max-width: 630px) {
+  .banner {
+    article {
+      grid-template-columns: repeat(2, 1fr);
+      .banner-info {
+        padding: 20px 10px;
+        p {
+          &:nth-child(2) {
+            font-size: 22px;
+            line-height: 15px;
+          }
+          &:nth-child(3) {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//*** media queries footer (m devices) ***//
+
+@media screen and (max-width: 639px) {
+  footer {
+    .bottom-bar {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}
+
+//*** media queries header (s devices) ***//
+
+@media screen and (max-width: 425px) {
+  header {
+    background-position: calc(74%);
+    .hero {
+      .right-header {
+        .offer {
+          padding: 10px 5px;
+          gap: 8px;
+          height: 100px;
+          .offer-info p {
+            &:nth-child(1) {
+              font-size: 10px;
+            }
+            &:nth-child(2) {
+              font-size: 30px;
+              margin-top: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//*** media queries information (s devices) ***//
+
+@media screen and (max-width: 425px) {
+  .information {
+    article {
+      h2 {
+        text-align: left;
+      }
+      .info {
+        display: flex;
+        flex-direction: column;
+        .left-info {
+          padding: 20px 40px;
+          margin-bottom: 44px;
+        }
+        .right-info {
+          padding: 20px 40px;
+        }
+      }
+    }
+  }
+}
+
+//*** media queries footer (s devices) ***//
+
+@media screen and (max-width: 425px) {
+  footer {
+    .footer {
+      .right-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+      }
+    }
+    .bottom-bar {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}
+
+//*** media queries footer (xs devices) ***//
+
+@media screen and (max-width: 320px) {
+  header {
+    background-position: calc(73%);
+    .hero {
+      .right-header {
+        border-radius: 20px;
+        padding: 15px 10px;
+        .offer {
+          gap: 8px;
+          height: 100px;
+          .offer-info p {
+            &:nth-child(1) {
+              font-size: 8px;
+            }
+            &:nth-child(2) {
+              font-size: 25px;
+              margin-top: 5px;
+            }
+          }
+        }
+      }
+    }
   }
 }
