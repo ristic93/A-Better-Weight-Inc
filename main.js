@@ -17,3 +17,12 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+// burger menu
+
+const burgerBtn = document.querySelector(".burger");
+const navLinks = document.querySelector("nav ul")
+
+let openNav = () => [
+  navLinks.classList.toggle("show-nav")
+]

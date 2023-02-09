@@ -13,9 +13,9 @@
 
     <header>
       <!-- navbar -->
-      <nav class="container">
+      <nav class="nav-container">
         <a href="#">
-          <img src="./img/logo-img.png" alt="" />
+          <img src="./img/logo-img.png" alt="" class="logo"/>
         </a>
         <ul>
           <li><a href="#">About us</a></li>
@@ -27,11 +27,16 @@
           <li><a href="#">Shop</a></li>
           <li><a href="#">Subscription</a></li>
         </ul>
+        <div class="burger" onclick="openNav()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </nav>
 
       <!-- hero -->
       <section class="hero container">
-        <article class="left__header">
+        <article class="left-header">
           <h1>
             Chicago's <span class="free-text">Free</span> Medical Check-Up and
             Weight Loss Consultation
@@ -40,9 +45,10 @@
             Limited spots available due to the Physicians schedule and the high
             demand for service. No credit card or insurance required.
           </p>
+          <p class="medium-spots">Only <span class="free-text">11</span> spots available!</p>
           <button>Book my appointment</button>
         </article>
-        <article class="right__header">
+        <article class="right-header">
           <p>Your offer ends in:</p>
           <div class="offer">
             <div class="offer-info">
@@ -63,6 +69,8 @@
             </div>
           </div>
         </article>
+        <p class="medium-info">There are limited spots due to the Physicians schedule and the high demand for service. No credit card or insurance required.</p>
+        <button class="medium-btn">Book my appointment</button>
       </section>
     </header>
 
@@ -97,7 +105,7 @@
       <button>Book my appointment</button>
     </section>
 
-    <!-- Consultation -->
+    <!-- consultation -->
 
     <section class="consultation">
       <article class="container">
@@ -141,6 +149,7 @@
           Technology has advanced rapidly in recent years and now, with proper
           guidance...
         </p>
+        <img src="./img/group-img-small.png" alt="" class="help-medium-img">
         <p>
           You can join the ranks of our over 15,000 satisfied clients who have
           lost weight, regained their confidence and are living happy exuberant
@@ -149,8 +158,8 @@
           without giving up ice-cream, bread, pizza, doughnuts and all their
           favorite foods.
         </p>
-        <button>Book my appointment</button>
-        <img src="./img/group-img.png" alt="" />
+        <button>See patient stories</button>
+        <img src="./img/group-img.png" alt="" class="help-big-img"/>
       </article>
     </section>
 
@@ -257,16 +266,24 @@
             program dedicated to helping you achieve long term weight loss
             success with the use of FDA approved medication.
           </p>
-          <p>
-            <img src="./img/icons/map.svg" alt="" /><span
-              >Head Office:&nbsp;&nbsp;</span
-            >
+          <div class="contact-footer">
+            <img src="./img/icons/map.svg" alt="" />
+            <p>
+              <span>
+                Head Office:&nbsp;
+              </span>
             1931 W 95th Streeet Chicago IL, 60643
           </p>
-          <p>
-            <img src="./img/icons/phone.svg" alt="" /><span>Phone:&nbsp;</span>
+          </div>
+          <div class="contact-footer">
+            <img src="./img/icons/phone.svg" alt="" />
+            <p>
+              <span>
+                Phone:&nbsp;
+              </span>
             773-496-4222
           </p>
+          </div>
         </div>
         <div class="right-footer">
           <div class="about-footer">
