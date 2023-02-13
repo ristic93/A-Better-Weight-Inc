@@ -163,7 +163,7 @@ p {
   color: $primary;
 }
 
-// back to top button
+//*** back to top button ***//
 
 #myBtn {
   border: none;
@@ -196,7 +196,12 @@ p {
   }
 }
 
-// hide/show burger menu
+//*** hide/show burger menu ***//
+
 .show-nav {
   transform: translateY(0);
+}
+
+.show-answer {
+  display: none;
 }

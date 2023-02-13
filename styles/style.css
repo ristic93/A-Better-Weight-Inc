@@ -189,6 +189,10 @@ p {
   transform: translateY(0);
 }
 
+.show-answer {
+  display: none;
+}
+
 header {
   background-image: url(..//img//background//hero_background.png);
   background-size: cover;
@@ -574,25 +578,35 @@ header .hero .medium-btn {
 .faq article h2 {
   margin-bottom: 64px;
 }
-.faq article div {
+.faq article .question-wrapper {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
   background-color: #f9f9f9;
   border-radius: 30px;
   padding: 18px 20px;
   margin-bottom: 30px;
 }
-.faq article div p {
+.faq article .question-wrapper .question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.faq article .question-wrapper .question p {
   font-weight: 500;
 }
-.faq article div img {
+.faq article .question-wrapper .question img {
   margin-right: 30px;
   cursor: pointer;
   transition: 0.3s linear;
 }
-.faq article div img:hover {
+.faq article .question-wrapper .question img:hover {
   transform: scale(1.2);
+}
+.faq article .question-wrapper .answer {
+  margin-top: 30px;
+  font-style: italic;
 }
 .faq button {
   padding: 10px 15px;

@@ -9,10 +9,14 @@
   </head>
   <body>
 
+    <!-- back to top button -->
+
     <button onclick="topFunction()" id="myBtn"><img src="./img/icons/chevron-up.svg" alt=""></i></button>
 
     <header>
+
       <!-- navbar -->
+
       <nav class="nav-container">
         <a href="#">
           <img src="./img/logo-img.png" alt="" class="logo"/>
@@ -27,7 +31,7 @@
           <li><a href="#">Shop</a></li>
           <li><a href="#">Subscription</a></li>
         </ul>
-        <div class="burger" onclick="openNav()">
+        <div class="burger" onclick="toggleBurger()">
           <span></span>
           <span></span>
           <span></span>
@@ -35,6 +39,7 @@
       </nav>
 
       <!-- hero -->
+      
       <section class="hero container">
         <article class="left-header">
           <h1>
@@ -53,19 +58,19 @@
           <div class="offer">
             <div class="offer-info">
               <p>Days</p>
-              <p>00</p>
+              <p id="days"></p>
             </div>
             <div class="offer-info">
               <p>Hours</p>
-              <p>16</p>
+              <p id="hours"></p>
             </div>
             <div class="offer-info">
               <p>Minutes</p>
-              <p>29</p>
+              <p id="minutes"></p>
             </div>
             <div class="offer-info">
               <p>Seconds</p>
-              <p>27</p>
+              <p id="seconds"></p>
             </div>
           </div>
         </article>
@@ -200,57 +205,15 @@
     <!-- faq -->
 
     <section class="faq">
-      <article class="text-container">
+      <article class="text-container" id="listQuestions">
         <h2>Frequently Asked Questions</h2>
-        <div>
-          <p>Why is it free?</p>
-          <img src="./img/icons/chevron-down.svg" alt="" />
-        </div>
-        <div>
-          <p>
-            Do I need this if I’ve had my yearly medical check? What is the
-            difference?
-          </p>
-          <img src="./img/icons/chevron-down.svg" alt="" />
-        </div>
-        <div>
-          <p>Can I bring another person to the appointment?</p>
-          <img src="./img/icons/chevron-down.svg" alt="" />
-        </div>
-        <div>
-          <p>How long does it take?</p>
-          <img src="./img/icons/chevron-down.svg" alt="" />
-        </div>
-        <div>
-          <p>
-            What if I have to cancel or if I’m not sure I’ll be able to make it?
-          </p>
-          <img src="./img/icons/chevron-down.svg" alt="" />
-        </div>
-        <div>
-          <p>Do I need to bring anything with me?</p>
-          <img src="./img/icons/chevron-down.svg" alt="" />
-        </div>
-        <div>
-          <p>What if I don’t have insurance?</p>
-          <img src="./img/icons/chevron-down.svg" alt="" />
-        </div>
-        <div>
-          <p>Do the weight loss programs you offer work?</p>
-          <img src="./img/icons/chevron-down.svg" alt="" />
-        </div>
-        <div>
-          <p>What's the catch?</p>
-          <img src="./img/icons/chevron-down.svg" alt="" />
-        </div>
-        <div>
-          <p>Will I have to exhaust myself in the gym to make it work?</p>
-          <img src="./img/icons/chevron-down.svg" alt="" />
-        </div>
-        <div>
-          <p>Where are you located?</p>
-          <img src="./img/icons/chevron-down.svg" alt="" />
-        </div>
+        <!-- <div class="question-wrapper">
+          <div class="question">
+            <p>Why is it free?</p>
+            <img src="./img/icons/chevron-down.svg" alt="" onclick="toggleDropDown()"/>
+          </div>
+          <p id="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, eveniet!</p>
+        </div> -->
       </article>
       <button>Book my appointment</button>
     </section>
@@ -323,6 +286,7 @@
       </article>
     </footer>
 
-    <script src="./main.js"></script>
+    <script src="./js/data.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
