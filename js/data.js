@@ -61,7 +61,7 @@ const printingQuestion = () => {
             <p>${question.question}</p>
             <img src="./img/icons/chevron-down.svg" alt="" onclick="toggleDropDown(${question.id})"/>
           </div>
-          <p class="answer show-answer">${question.answer}</p>
+          <p class="answer show-answer" id="${question.id}">${question.answer}</p>
         </div>
         `
     })
@@ -72,9 +72,8 @@ printingQuestion();
 
 //*** dropdown questions ***//
 
-const element = document.querySelector(".answer")
-
-let toggleDropDown = () => {
-    element.classList.toggle("show-answer");
+let toggleDropDown = (id) => {
+    const answer = document.querySelector(`[id="${id}"]`)
+    answer.classList.toggle("show-answer");
 }
 
